@@ -69,7 +69,7 @@ public class Main {
         return scanner.nextLine();
     }
 
-    public static void configurarConexao() {
+    public static void configurarConexao() { //Configura a conexão antes de abrir
         if (!conexaoAberta) {
             Scanner scanner = new Scanner(System.in);
 
@@ -91,7 +91,7 @@ public class Main {
         }
     }
 
-    public static void abrirConexao () {
+    public static void abrirConexao () { //Abre a conexão após configurar
 
         //sempre que for chamar uma funçao da biblioteca, usar como abaixo (ImpressoraDLL.INSTANCE.nomeDaFuncao)
 
@@ -110,7 +110,7 @@ public class Main {
     }
 
 
-    public static void fecharConexao () {
+    public static void fecharConexao () { //Fecha a conexão se estiver aberta
         if (conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.FechaConexaoImpressora();
 
@@ -125,7 +125,7 @@ public class Main {
         }
     }
 
-    public static void impressaoTexto() {
+    public static void impressaoTexto() { //Imprime um papel com o texto escolhido
         if (conexaoAberta) {
             System.out.println("Digite o texto a ser impresso: ");
             String dados = scanner.nextLine();
@@ -142,7 +142,7 @@ public class Main {
         }
     }
 
-    public static void impressaoQRCode() {
+    public static void impressaoQRCode() { //Imprime um QR code q leva ao texto escolhido
         if (conexaoAberta) {
             System.out.println("Digite o texto a ser impresso: ");
             String dados = scanner.nextLine();
@@ -159,7 +159,7 @@ public class Main {
         }
     }
 
-    public static void impressaoCodigoBarras() {
+    public static void impressaoCodigoBarras() { //Imprime um codigo de barras
         if (conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.ImpressaoCodigoBarras(8, "{A012345678912", 100, 2, 3);
 
@@ -173,7 +173,7 @@ public class Main {
         }
     }
 
-    public static void avancaPapel() {
+    public static void avancaPapel() { //Empurra o papel
         if (conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.AvancaPapel(2);
 
@@ -187,7 +187,7 @@ public class Main {
         }
     }
 
-    public static void abreGavetaElgin() {
+    public static void abreGavetaElgin() { //Abre a gavetinha da impressora
         if (conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.AbreGavetaElgin();
 
@@ -201,7 +201,7 @@ public class Main {
         }
     }
 
-    public static void abreGaveta() {
+    public static void abreGaveta() { //Abre a gavetinha também
         if (conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.AbreGaveta(1, 5, 10);
 
@@ -215,7 +215,7 @@ public class Main {
         }
     }
 
-    public static void sinalSonoro() {
+    public static void sinalSonoro() { //Emite um sinal sonoro
         if (conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.SinalSonoro(4,5,5);
 
@@ -229,7 +229,7 @@ public class Main {
         }
     }
 
-    public static void imprimeXMLSAT() {
+    public static void imprimeXMLSAT() { //Imprime um recibo
         String dados = "path=C:\\Users\\souza_correa\\Downloads\\Java-Aluno EM\\XMLSAT.xml";
 
         if (conexaoAberta) {
@@ -245,7 +245,7 @@ public class Main {
         }
     }
 
-    public static void imprimeXMLCancelamentoSAT() {
+    public static void imprimeXMLCancelamentoSAT() { //Imprime um recibo de cancelamento com um QR code
         if (conexaoAberta) {
             JFileChooser fileChooser = new JFileChooser();
             fileChooser.setCurrentDirectory(new File(".")); // Diretório atual do programa
@@ -274,25 +274,9 @@ public class Main {
         }
     }
 
-
-    //criar o restante das funçoes aqui!
-
-	/* - `ImpressaoTexto()`          ("Teste de impressao", 1, 4, 0);
-	- `Corte()`						(2)  usar sempre após a impressao de algum documento
-	- `ImpressaoQRCode()`            ("Teste de impressao", 6, 4)
-	- `ImpressaoCodigoBarras()`    (8, "{A012345678912", 100, 2, 3)
-	- `AvancaPapel()`                 (2)  usar sempre após a impressao de algum documento
-	- `AbreGavetaElgin()`            (1, 50, 50)
-
-	- `AbreGaveta()`                  (1, 5, 10)
-	- `SinalSonoro()`				 (4,5,5)
-	- `ImprimeXMLSAT()`
-	- `ImprimeXMLCancelamentoSAT()`    (assQRCode = "Q5DLkpdRijIRGY6YSSNsTWK1TztHL1vD0V1Jc4spo/CEUqICEb9SFy82ym8EhBRZjbh3btsZhF+sjHqEMR159i4agru9x6KsepK/q0E2e5xlU5cv3m1woYfgHyOkWDNcSdMsS6bBh2Bpq6s89yJ9Q6qh/J8YHi306ce9Tqb/drKvN2XdE5noRSS32TAWuaQEVd7u+TrvXlOQsE3fHR1D5f1saUwQLPSdIv01NF6Ny7jZwjCwv1uNDgGZONJdlTJ6p0ccqnZvuE70aHOI09elpjEO6Cd+orI7XHHrFCwhFhAcbalc+ZfO5b/+vkyAHS6CYVFCDtYR9Hi5qgdk31v23w==";)
-	*/
-
-
     public static void main (String[]args){
         while (true) {
+            //Printa o menu e roda o programa toda vez que uma função é escolhida e completa.
             System.out.println("\n*************************************************");
             System.out.println("**************** MENU IMPRESSORA ****************");
             System.out.println("*************************************************\n");
@@ -309,6 +293,7 @@ public class Main {
             System.out.println("10 - Sinal Sonoro");
             System.out.println("0 - Fechar Conexao e Sair");
 
+            //Captura a escolha do usuário
             String escolha = capturarEntrada("\nDigite a opção desejada: ");
 
             if (escolha.equals("0")) {
@@ -317,6 +302,7 @@ public class Main {
                 break;
             }
 
+            //Alterna entre as funções de acordo com a opção escolhida
             switch (escolha) {
                 case "1":
                     configurarConexao();
