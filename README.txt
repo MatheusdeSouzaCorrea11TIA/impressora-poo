@@ -68,3 +68,10 @@ executar suas funções
 
 # int ImprimeXMLCancelamentoSAT(String dados, String assQRCode, int param);String modelo, String conexao, int param);
  //Imprime um recibo de cancelamento com um QR code
+
+-> AUTORES:
+# Matheus de Souza Correa
+# Gustavo Henrique
+# Pedro de Oliveira
+# David Costa
+# Bianca (n fez absolutamente nada)

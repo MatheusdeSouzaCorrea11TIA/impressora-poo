@@ -92,9 +92,6 @@ public class Main {
     }
 
     public static void abrirConexao () { //Abre a conexão após configurar
-
-        //sempre que for chamar uma funçao da biblioteca, usar como abaixo (ImpressoraDLL.INSTANCE.nomeDaFuncao)
-
         if (!conexaoAberta) {
             int retorno = ImpressoraDLL.INSTANCE.AbreConexaoImpressora(tipo, modelo, conexao, parametro);
 
@@ -264,7 +261,7 @@ public class Main {
                     ImpressoraDLL.INSTANCE.Corte(5);
                     System.out.println(retImpCanXMLSAT == 0 ? "Impressão de XML de Cancelamento realizada" : "Erro ao realizar a impressão do XML de Cancelamento SAT! Retorno: " + retImpCanXMLSAT);
                 } catch (IOException e) {
-                    System.out.println("Erro ao ler o arquivo XML: " + e.getMessage());
+                    System.out.println("Erro aob  ler o arquivo XML: " + e.getMessage());
                 }
             } else {
                 System.out.println("Nenhum arquivo selecionado.");
@@ -335,15 +332,12 @@ public class Main {
 
                 case "8":
                     abreGavetaElgin();
-                    ImpressoraDLL.INSTANCE.Corte(3);
                     break;
                 case "9":
                     abreGaveta();
-                    ImpressoraDLL.INSTANCE.Corte(3);
                     break;
                 case "10":
                     sinalSonoro();
-                    ImpressoraDLL.INSTANCE.Corte(3);
                     break;
 
                 default:
