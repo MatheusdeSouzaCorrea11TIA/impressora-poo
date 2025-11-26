@@ -70,8 +70,8 @@ executar suas funções
  //Imprime um recibo de cancelamento com um QR code
 
 -> AUTORES:
-# Matheus de Souza Correa
-# Gustavo Henrique
-# Pedro de Oliveira
+# Bianca
 # David Costa
-# Bianca (n fez absolutamente nada)
+# Gustavo Henrique
+# Matheus de Souza Correa
+# Pedro de Oliveira
