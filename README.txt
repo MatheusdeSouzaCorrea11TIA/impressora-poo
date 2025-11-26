@@ -1,5 +1,29 @@
 ==== IMPRESSORA ELGIN ====
 
+-> COMO BAIXAR O PROJETO:
+
+# Abra o repositório no github https://github.com/MatheusdeSouzaCorrea11TIA/impressora-poo
+
+# Clique em "<> Code" e faça o download o ZIP
+
+# Extraia a pasta
+
+# Abra o IntelliJ e clique em Open para abrir um PROJETO
+
+# Selecione a pasta extraida
+
+# Selecione a classe Main execute o projeto em "RUN" ou clique F5
+
+-> COMO USAR A IMPRESSORA:
+
+# Primeiro configure a conexão
+
+# Após isso abra a conexão
+
+# Selecione a função desejada e siga as instruções
+
+# Após finalizar feche a conexão
+
 -> COMO FUNCIONA CADA FUNÇÃO:
 
 ## OBS ##
